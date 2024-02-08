@@ -1,5 +1,7 @@
 # Generating Anime Characters Using DCGANs
 
+![Generated Characters](assets/generated-characters.png)
+
 ## Introduction
 
 The main aim of this project is the generation of anime characters, but the task is achieved not by any manual procedure; instead, it is executed automatically by a generative model which is trained along with a discriminative model to obtain the appropriate level of accuracy in our output/generated anime image. Since here we are using generative adversarial network architecture, the type of learning implemented here would be unsupervised. Also, the problem here is that we are not simply generating images/anime characters that are already present, but we are aiming to generate some random images that have the features of an anime character, but at the same time, the image should itself be different compared to dataset images. We can understand our requirement with the below figure where we are taking two pictures from the dataset and creating a third image, which is not part of the dataset.
@@ -60,6 +62,7 @@ Discriminator and generator are deep convolutional networks, discriminator consi
 We have used Binary Cross Entropy (Log Loss) as a loss function for this problem, since Discriminator is differentiating between real images and fake images so the discriminator can be inferred as a binary classifier between real and fake images, and in case of binary classification binary cross entropy loss function turns out to be one of the best loss functions. Though BCE loss has many downsides but it is a good starting point for the different experiments, In further experiments we can also use Wasserstein Distance as GAN Loss Function.
 
 ### Dataset:
+![Training Data](assets/training-samples.png)
 For GAN training we have used a mixed dataset from different sources since it will be more diverse and may yield better results, our dataset consists of around 2000 images of anime characters. We used anime face dataset found on Kaggle, some images from google image search, and some images from online anime websites.
 
 ### Quality metric:
